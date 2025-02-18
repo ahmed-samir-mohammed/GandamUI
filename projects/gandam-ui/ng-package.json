@@ -3,7 +3,6 @@
   "dest": "../../dist/gandam-ui",
   "lib": {
     "entryFile": "src/public-api.ts",
-    "cssUrl": "inline",
-    "styleIncludePaths": ["src"]
+    "cssUrl": "none"
   }
 }
