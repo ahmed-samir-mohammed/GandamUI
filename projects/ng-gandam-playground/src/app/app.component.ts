@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ButtonComponent } from '../../../ng-gandam/src/public-api';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [ButtonComponent],
+  template: ` <gButton gText="From Angular" />`,
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'ng-gandam-playground';
