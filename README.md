@@ -1,59 +1,29 @@
-# Gandam
+# 🚀 ng-gandam – Angular UI Component Library
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+ng-gandam is a modern **UI component library** built specifically for Angular applications using  **Tailwind CSS**. It aims to provide **lightweight, flexible, and customizable components** to speed up development.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🌟 Features
+✅ **Fully Standalone Components** – No need for NgModules  
+✅ **Tailwind CSS-Based** – Easily style components using Tailwind utilities  
+✅ **Customizable** – Override default styles with Tailwind classes  
+✅ **Lightweight & Performant** – Optimized for fast rendering  
 
-```bash
-ng serve
+---
+
+## 📦 Installation
+To install `ng-gandam` in your Angular project, run:
+```sh
+npm install ng-gandam
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+### **🚀 Next Steps**
+- Add a **GitHub repository** and push the README file.
+- Include a **Live Demo or Playground** (e.g., StackBlitz).
+- Expand the documentation for more components.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Let me know if you'd like any **modifications**! 🚀
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

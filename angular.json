@@ -10,23 +10,23 @@
     }
   },
   "projects": {
-    "gandam-ui": {
+    "ng-gandam": {
       "projectType": "library",
-      "root": "projects/gandam-ui",
-      "sourceRoot": "projects/gandam-ui/src",
+      "root": "projects/ng-gandam",
+      "sourceRoot": "projects/ng-gandam/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/gandam-ui/ng-package.json"
+            "project": "projects/ng-gandam/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/gandam-ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-gandam/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/gandam-ui/tsconfig.lib.json"
+              "tsConfig": "projects/ng-gandam/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -34,7 +34,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/gandam-ui/tsconfig.spec.json",
+            "tsConfig": "projects/ng-gandam/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
