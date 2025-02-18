@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/gandam-ui",
+  "dest": "../../dist/ng-gandam",
   "lib": {
     "entryFile": "src/public-api.ts",
     "cssUrl": "none"
