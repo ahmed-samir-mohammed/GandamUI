@@ -1,5 +1,5 @@
 {
-  "name": "ng-gandam",
+  "name": "@gandam/ui",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.1.0",
