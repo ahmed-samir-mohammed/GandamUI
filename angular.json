@@ -10,23 +10,23 @@
     }
   },
   "projects": {
-    "ng-gandam": {
+    "ui": {
       "projectType": "library",
-      "root": "projects/ng-gandam",
-      "sourceRoot": "projects/ng-gandam/src",
+      "root": "projects/ui",
+      "sourceRoot": "projects/ui/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ng-gandam/ng-package.json"
+            "project": "projects/ui/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-gandam/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ng-gandam/tsconfig.lib.json"
+              "tsConfig": "projects/ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -34,37 +34,37 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ng-gandam/tsconfig.spec.json",
+            "tsConfig": "projects/ui/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
     },
-    "ng-gandam-playground": {
+    "playground": {
       "projectType": "application",
-      "root": "projects/ng-gandam-playground",
-      "sourceRoot": "projects/ng-gandam-playground/src",
+      "root": "projects/playground",
+      "sourceRoot": "projects/playground/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-gandam-playground",
-            "index": "projects/ng-gandam-playground/src/index.html",
-            "main": "projects/ng-gandam-playground/src/main.ts",
+            "outputPath": "dist/playground",
+            "index": "projects/playground/src/index.html",
+            "main": "projects/playground/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/ng-gandam-playground/tsconfig.app.json",
+            "tsConfig": "projects/playground/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/ng-gandam-playground/public",
+                "input": "projects/playground/public",
                 "output": "/"
               }
             ],
             "styles": [
-              "projects/ng-gandam-playground/src/styles.css"
+              "projects/playground/src/styles.css"
             ],
             "scripts": []
           },
@@ -96,10 +96,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-gandam-playground:build:production"
+              "buildTarget": "playground:build:production"
             },
             "development": {
-              "buildTarget": "ng-gandam-playground:build:development"
+              "buildTarget": "playground:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -114,18 +114,51 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/ng-gandam-playground/tsconfig.spec.json",
+            "tsConfig": "projects/playground/tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/ng-gandam-playground/public",
+                "input": "projects/playground/public",
                 "output": "/"
               }
             ],
             "styles": [
-              "projects/ng-gandam-playground/src/styles.css"
+              "projects/playground/src/styles.css"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "form": {
+      "projectType": "library",
+      "root": "projects/form",
+      "sourceRoot": "projects/form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/form/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }

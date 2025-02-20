@@ -6,6 +6,9 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
+      "form": [
+        "./dist/form"
+      ],
       "gandam-ui": [
         "./dist/gandam-ui"
       ]
