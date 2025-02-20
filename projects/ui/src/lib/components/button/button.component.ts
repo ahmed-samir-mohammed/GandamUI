@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
-// import { GandamSize } from '../../types';
+import { GandamSize } from '../../types';
 
 /**
  * ButtonComponent is a reusable button component for Angular applications.
  * It allows customization of text, CSS classes, color, and disabled state.
  */
 @Component({
-  selector: 'gButton',
+  selector: 'g-button',
   standalone: true,
   template: ` <button [class]="gClass + ' ' + gColor" [disabled]="gDisabled">
     {{ gText }}
@@ -37,7 +37,7 @@ export class ButtonComponent {
    * @default false
    */
   @Input('disabled') gDisabled: boolean = false;
-  // @Input() gSize: GandamSize = 'medium';
+  @Input() gSize: GandamSize = 'medium';
 
   /**
    * Lifecycle hook that is called after data-bound properties are initialized.

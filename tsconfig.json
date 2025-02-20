@@ -11,6 +11,9 @@
       ],
       "gandam-ui": [
         "./dist/gandam-ui"
+      ],
+      "theme": [
+        "./dist/theme"
       ]
     },
     "noImplicitOverride": true,
