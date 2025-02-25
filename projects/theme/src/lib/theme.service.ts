@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { GandamTheme } from './GandamThem';
+import { GandamTheme } from './theme.interface';
 
 export const DEFAULT_THEME: GandamTheme = {
   primaryColor: 'bg-slate-800',

@@ -3,7 +3,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { EventEmitter, Output } from '@angular/core';
 import { FileInput } from '../../core/interface/form.interface';
 import { GANDAM_THEME } from '../../../../theme/src/public-api';
-import { GandamTheme } from '../../../../theme/src/lib/GandamThem';
+import { GandamTheme } from '../../../../theme/src/lib/theme.interface';
 
 @Component({
   selector: 'g-upload-file',
