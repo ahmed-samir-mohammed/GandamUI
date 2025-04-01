@@ -16,18 +16,23 @@ import { GandamTheme } from '../../../../theme/src/lib/theme.interface';
     },
   ],
   template: `
-    <div class="flex flex-col gap-2">
-      <label class="font-semibold text-white" [for]="controlName">
+    <div [class]="'flex flex-col gap-2 mb-4 ' + theme.input?.background">
+      <label [class]="'font-semibold ' + theme.input?.text" [for]="controlName">
         {{ label }}
         @if (required) {
-        <span class="text-red-600">*</span>
+        <span class="text-red-500">*</span>
         }
       </label>
       <label
         [for]="controlName"
-        class=" flex items-center justify-between cursor-pointer p-3 border rounded-lg"
+        [class]="
+          'flex items-center justify-between cursor-pointer p-3 border ' +
+          theme.borderRadius +
+          ' ' +
+          theme.input?.background
+        "
       >
-        <span class=" font-semibold text-slate-400 text-sm">
+        <span [class]="'font-semibold text-sm ' + theme.input?.placeholder">
           {{ fileName }}
         </span>
 
@@ -41,7 +46,7 @@ import { GandamTheme } from '../../../../theme/src/lib/theme.interface';
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="feather feather-upload text-white"
+          [class]="'feather feather-upload ' + theme.colors?.icon"
         >
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="17 8 12 3 7 8"></polyline>

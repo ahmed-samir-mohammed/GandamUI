@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Input } from '@angular/core';
 import { GandamSize } from '../../types';
+import { GANDAM_THEME } from '../../../../../theme/src/public-api';
+import { GandamTheme } from '../../../../../theme/src/lib/theme.interface';
 
 /**
  * ButtonComponent is a reusable button component for Angular applications.
@@ -9,8 +11,8 @@ import { GandamSize } from '../../types';
 @Component({
   selector: 'g-button',
   standalone: true,
-  template: ` <button [class]="gClass + ' ' + gColor" [disabled]="gDisabled">
-    {{ gText }}
+  template: ` <button [class]="getButtonClasses()" [disabled]="gDisabled">
+    {{ text }}
   </button>`,
 })
 export class ButtonComponent {
@@ -18,19 +20,19 @@ export class ButtonComponent {
    * The text to display inside the button.
    * @default ''
    */
-  @Input() gText: string = '';
+  @Input() text: string = '';
 
   /**
    * The CSS classes to apply to the button for styling.
-   * @default 'px-4 py-2 font-semibold rounded-lg'
+   * @default ''
    */
-  @Input() gClass: string = 'px-4 py-2 font-semibold rounded-lg';
+  @Input() gClass: string = '';
 
   /**
    * The color classes to apply to the button for styling.
-   * @default 'bg-blue-500 hover:bg-blue-600 text-white'
+   * @default ''
    */
-  @Input() gColor: string = 'bg-blue-500 hover:bg-blue-600 text-white';
+  @Input() gColor: string = '';
 
   /**
    * Determines whether the button is disabled.
@@ -38,6 +40,42 @@ export class ButtonComponent {
    */
   @Input('disabled') gDisabled: boolean = false;
   @Input() gSize: GandamSize = 'medium';
+
+  /**
+   * Constructor that injects the theme service.
+   */
+  constructor(@Inject(GANDAM_THEME) public theme: GandamTheme) {}
+
+  /**
+   * Gets the button classes based on the theme and size.
+   * @returns The CSS classes for the button.
+   */
+  getButtonClasses(): string {
+    const sizeClasses = this.getSizeClasses();
+    const baseClasses = 'font-semibold ' + this.theme.borderRadius;
+    const textColorClasses = this.theme.button?.text || 'text-white';
+    const colorClasses = this.gColor || this.theme.button || 'bg-blue-500';
+
+    return `${
+      this.gClass || baseClasses
+    } ${sizeClasses} ${colorClasses} ${textColorClasses}`;
+  }
+
+  /**
+   * Gets the size classes based on the gSize input.
+   * @returns The CSS classes for the button size.
+   */
+  getSizeClasses(): string {
+    switch (this.gSize) {
+      case 'small':
+        return 'px-2 py-1 text-sm';
+      case 'large':
+        return 'px-6 py-3 text-lg';
+      case 'medium':
+      default:
+        return 'px-4 py-2';
+    }
+  }
 
   /**
    * Lifecycle hook that is called after data-bound properties are initialized.

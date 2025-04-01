@@ -6,7 +6,8 @@
     "@schematics/angular:component": {
       "inlineStyle": true,
       "inlineTemplate": true,
-      "standalone": true
+      "standalone": true,
+      "skipTests": true
     }
   },
   "projects": {

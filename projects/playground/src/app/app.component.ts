@@ -3,14 +3,15 @@ import { ButtonComponent } from '../../../ui/src/lib/components/button/button.co
 import { UploadFileComponent } from '../../../form/src/lib/upload-file/upload-file.component';
 @Component({
   selector: 'app-root',
-  imports: [
-    // ButtonComponent,
-    UploadFileComponent,
-  ],
+  imports: [ButtonComponent, UploadFileComponent],
   template: `
     <div class="w-full h-screen flex items-center justify-center">
-      <form class=" bg-slate-700 p-4 w-[40vw]">
-        <g-upload-file (fileSelected)="fileSelected($event)" />
+      <form class="bg-slate-700 p-4 w-[40vw]">
+        <g-upload-file
+          [label]="'Upload file'"
+          (fileSelected)="fileSelected($event)"
+        />
+        <g-button [text]="'Save'" />
       </form>
     </div>
   `,
