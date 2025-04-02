@@ -4,7 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:libs && ng build",
+    "build:libs": "npm run build:theme && npm run build:form && npm run build:ui",
+    "build:theme": "ng build theme",
+    "build:form": "ng build form",
+    "build:ui": "ng build ui",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -19,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@tailwindcss/postcss": "^4.0.7",
+    "esbuild-wasm": "^0.25.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -29,6 +34,7 @@
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.20",
+    "esbuild": "^0.25.2",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -39,5 +45,11 @@
     "postcss": "^8.5.2",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.7.2"
+  },
+  "resolutions": {
+    "esbuild": "npm:esbuild-wasm@latest",
+    "**/@angular-devkit/build-angular/esbuild": "npm:esbuild-wasm@latest",
+    "**/ng-packagr/esbuild": "npm:esbuild-wasm@latest",
+    "**/esbuild": "npm:esbuild-wasm@latest"
   }
 }

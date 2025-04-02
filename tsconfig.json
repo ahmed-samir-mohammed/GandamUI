@@ -5,16 +5,11 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "strict": true,
+    "baseUrl": "./",
     "paths": {
-      "form": [
-        "./dist/form"
-      ],
-      "gandam-ui": [
-        "./dist/gandam-ui"
-      ],
-      "theme": [
-        "./dist/theme"
-      ]
+      "@gandam/theme": ["dist/theme"],
+      "@gandam/form": ["dist/form"],
+      "@gandam/ui": ["dist/ui"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

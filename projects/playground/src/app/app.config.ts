@@ -2,8 +2,8 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideGandam } from '../../../theme/src/public-api';
 import { GANDAM_CONFIG } from './gandam.config';
+import { provideGandam } from '@gandam/theme';
 
 export const appConfig: ApplicationConfig = {
   providers: [

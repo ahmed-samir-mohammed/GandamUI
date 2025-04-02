@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../../ui/src/lib/components/button/button.component';
-import { UploadFileComponent } from '../../../form/src/lib/upload-file/upload-file.component';
+import { UploadFileComponent } from '@gandam/form';
+import { ButtonComponent } from '@gandam/ui';
+
 @Component({
   selector: 'app-root',
   imports: [ButtonComponent, UploadFileComponent],

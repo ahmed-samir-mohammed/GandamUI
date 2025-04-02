@@ -6,8 +6,9 @@
     "outDir": "../../out-tsc/app",
     "types": [],
     "paths": {
-      "@gandam/ui": ["/gandam/dist/ui"],
-      "@gandam/form": ["/gandam/dist/form"]
+      "@gandam/ui": ["dist/ui"],
+      "@gandam/form": ["dist/form"],
+      "@gandam/theme": ["dist/theme"]
     }
   },
 

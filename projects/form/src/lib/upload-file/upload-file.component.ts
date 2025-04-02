@@ -2,12 +2,12 @@ import { Component, forwardRef, Inject, Input, input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { EventEmitter, Output } from '@angular/core';
 import { FileInput } from '../../core/interface/form.interface';
-import { GANDAM_THEME } from '../../../../theme/src/public-api';
-import { GandamTheme } from '../../../../theme/src/lib/theme.interface';
+import { GANDAM_THEME, GandamTheme } from '@gandam/theme' ;
 
 @Component({
   selector: 'g-upload-file',
   imports: [],
+  standalone: true,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
