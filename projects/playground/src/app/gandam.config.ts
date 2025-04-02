@@ -1,4 +1,4 @@
-import { GandamTheme } from "../../../theme/src/lib/theme.interface";
+import { GandamTheme } from '../../../theme/src/lib/theme.interface';
 
 export const GANDAM_CONFIG: GandamTheme = {
   colors: {
@@ -8,9 +8,12 @@ export const GANDAM_CONFIG: GandamTheme = {
     icon: 'text-gray-400',
   },
   input: {
-    text: 'text-gray-50',
+    text: 'text-gray-900',
     border: 'border-gray-300',
     placeholder: 'text-gray-400',
     borderRadius: 'rounded-lg',
+  },
+  button: {
+    text: 'text-gray-50',
   },
 };
