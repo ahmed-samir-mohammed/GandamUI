@@ -51,7 +51,7 @@ export class ButtonComponent {
    */
   getButtonClasses(): string {
     const sizeClasses = this.getSizeClasses();
-    const baseClasses = 'font-semibold ' + this.theme.borderRadius;
+    const baseClasses = 'font-semibold ' + this.theme.button?.borderRadius;
     const textColorClasses = this.theme.button?.text || 'text-white';
     const colorClasses = this.gColor || this.theme.button || 'bg-blue-500';
 

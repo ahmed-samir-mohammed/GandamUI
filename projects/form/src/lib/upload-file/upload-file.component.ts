@@ -2,7 +2,7 @@ import { Component, forwardRef, Inject, Input, input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { EventEmitter, Output } from '@angular/core';
 import { FileInput } from '../../core/interface/form.interface';
-import { GANDAM_THEME, GandamTheme } from '@gandam/theme' ;
+import { GANDAM_THEME, GandamTheme } from '@gandam/theme';
 
 @Component({
   selector: 'g-upload-file',
@@ -27,7 +27,7 @@ import { GANDAM_THEME, GandamTheme } from '@gandam/theme' ;
         [for]="controlName"
         [class]="
           'flex items-center justify-between cursor-pointer p-3 border ' +
-          theme.borderRadius +
+          theme.input?.borderRadius +
           ' ' +
           theme.input?.background
         "
