@@ -1,63 +1,127 @@
-# Theme
+# @gandam/theme
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.0.
+A powerful and flexible theming system for Angular applications using Gandam UI components.
 
-## Code scaffolding
+## Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Install the theme package using npm:
 
 ```bash
-ng generate --help
+npm install @gandam/theme
 ```
 
-## Building
+## Basic Setup
 
-To build the library, run:
+1. Import the theme module in your app.module.ts:
 
-```bash
-ng build theme
+```typescript
+import { provideGandam } from "@gandam/theme";
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideGandam({
+      // your theme configuration
+    }),
+  ],
+};
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+2. Configure your Tailwind CSS setup by extending the theme configuration in tailwind.config.js:
 
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/theme
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```javascript
+module.exports = {
+  content: ["./src/**/*.{html,ts}", "./node_modules/@gandam/**/*.{html,ts,mjs}"],
+  theme: {
+    extend: {
+      // Your custom theme configurations
+    },
+  },
+};
 ```
 
-## Running end-to-end tests
+## Theme Customization
 
-For end-to-end (e2e) testing, run:
+### Theme Interface
 
-```bash
-ng e2e
+The `GandamTheme` interface provides a comprehensive set of customization options:
+
+```typescript
+import { GandamTheme } from "@gandam/theme";
+
+export const myTheme: GandamTheme = {
+  // Global Typography
+  typography: string,
+
+  // Global Colors
+  colors: {
+    text: string, // Default text color
+    background: string, // Default background color
+    border: string, // Default border color
+    icon: string, // Default icon color
+    error: string, // Error state color
+  },
+
+  // Button Customization
+  button: {
+    text: string, // Button text color
+    background: string, // Button background color
+    hover: string, // Hover state background
+    hoverText: string, // Hover state text color
+    active: string, // Active state background
+    activeText: string, // Active state text color
+    disabled: string, // Disabled state color
+    border: string, // Button border color
+    borderRadius: string, // Button border radius
+    focus: string, // Focus state color
+  },
+
+  // Input Field Customization
+  input: {
+    background: string, // Input background color
+    text: string, // Input text color
+    placeholder: string, // Placeholder text color
+    border: string, // Input border color
+    borderRadius: string, // Input border radius
+    focus: string, // Focus state color
+  },
+
+  // Card Component Customization
+  card: {
+    background: string, // Card background color
+    hText: string, // Card heading text color
+    pText: string, // Card paragraph text color
+    border: string, // Card border color
+    borderRadius: string, // Card border radius
+  },
+};
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Example Usage
+
+Here's how to create a custom theme:
+
+```typescript
+import { GandamTheme } from "@gandam/theme";
+
+export const myTheme: GandamTheme = {
+  typography: "font-sans",
+  colors: {
+    text: "text-gray-900",
+    background: "bg-gray-100",
+    border: "border-gray-300",
+    icon: "text-gray-400",
+  },
+  input: {
+    text: "text-gray-50",
+    border: "border-gray-300",
+    placeholder: "text-gray-400",
+    borderRadius: "rounded-lg shadow-sm",
+  },
+};
+```
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Gandam UI Documentation](https://gandamui.dev)
+- [Tailwind CSS Documentation](https://tailwindcss.com)
+- [Angular Documentation](https://angular.dev)

@@ -1,63 +1,95 @@
-# Form
+# GandamUI Form Library
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.0.
+A powerful and flexible form handling library for Angular applications.
 
-## Code scaffolding
+## Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Install the library using npm:
 
 ```bash
-ng generate --help
+npm install @gandam/form
 ```
 
-## Building
+## Tailwind CSS Configuration
 
-To build the library, run:
+GandamUI Form Library is built with Tailwind CSS for styling. To properly use the library with Tailwind CSS, you need to configure your `tailwind.config.js` as follows:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts,js}", // Scan your application files
+    "./node_modules/@gandam/**/*.{html,ts,js,mjs}", // Scan GandamUI components
+  ],
+  theme: {
+    extend: {}, // Add your custom theme extensions here
+  },
+  plugins: [], // Add any required Tailwind plugins here
+};
+```
+
+### Configuration Explanation
+
+#### Content Paths
+
+- `./src/**/*.{html,ts,js,jsx,tsx}`: Scans all your application source files for Tailwind classes
+- `./node_modules/@gandam/**/*.{html,ts,js,jsx,tsx,mjs}`: Ensures Tailwind processes styles in GandamUI components
+
+#### Theme Customization
+
+Use the `theme.extend` section to customize or override default Tailwind styles. This ensures compatibility with GandamUI components while allowing for your own styling preferences.
+
+#### Plugins
+
+Add any Tailwind plugins that enhance your development experience or provide additional utilities.
+
+### Important Notes
+
+- Always include the GandamUI path in your content configuration to ensure proper styling
+- Avoid overriding base styles that might affect GandamUI components
+- Keep your Tailwind configuration in sync with your project's styling needs
+
+## Theme Customization
+
+GandamUI provides a powerful theme package that allows you to customize the appearance of components. Install the theme package using npm:
 
 ```bash
-ng build form
+npm install @gandam/theme
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+### Basic Theme Configuration
 
-### Publishing the Library
+To customize the theme, import and configure the theme module in your application:
 
-Once the project is built, you can publish your library by following these steps:
+```typescript
+import { provideGandam } from "@gandam/theme";
 
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/form
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideGandam({
+      colors: {
+        text: "text-gray-900",
+        background: "bg-gray-100",
+        border: "border-gray-300",
+        icon: "text-gray-400",
+      },
+      input: {
+        text: "text-gray-50",
+        border: "border-gray-300",
+        placeholder: "text-gray-400",
+        borderRadius: "rounded-lg shadow-sm",
+      },
+    }),
+  ],
+};
 ```
 
-## Running end-to-end tests
+### Theme Options
 
-For end-to-end (e2e) testing, run:
+The theme package supports customization of various aspects:
 
-```bash
-ng e2e
-```
+- **Colors**: Customize the color palette for components
+- **Typography**: Define font families, sizes, and weights
+- **Borders**: Customize border styles and radiuses
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Refer to the @gandam/theme documentation for detailed customization options.
