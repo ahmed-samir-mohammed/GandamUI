@@ -1,5 +1,5 @@
 {
-  "name": "@gandam/theme",
+  "name": "@gandum/theme",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.1.0",

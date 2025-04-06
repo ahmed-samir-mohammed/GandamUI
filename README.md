@@ -1,6 +1,6 @@
-# 🚀 ng-gandam – Angular UI Component Library
+# 🚀 ng-gandum – Angular UI Component Library
 
-ng-gandam is a modern **UI component library** built specifically for Angular applications using  **Tailwind CSS**. It aims to provide **lightweight, flexible, and customizable components** to speed up development.
+ng-gandum is a modern **UI component library** built specifically for Angular applications using  **Tailwind CSS**. It aims to provide **lightweight, flexible, and customizable components** to speed up development.
 
 ---
 
@@ -13,9 +13,9 @@ ng-gandam is a modern **UI component library** built specifically for Angular ap
 ---
 
 ## 📦 Installation
-To install `ng-gandam` in your Angular project, run:
+To install `ng-gandum` in your Angular project, run:
 ```sh
-npm install ng-gandam
+npm install ng-gandum
 ```
 
 ---

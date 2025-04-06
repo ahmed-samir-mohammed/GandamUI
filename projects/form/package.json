@@ -1,10 +1,10 @@
 {
-  "name": "@gandam/form",
+  "name": "@gandum/form",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.1.0",
     "@angular/core": "^19.1.0",
-    "@gandam/theme": "^0.0.1"
+    "@gandum/theme": "^0.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"

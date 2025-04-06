@@ -1,4 +1,4 @@
-export interface GandamTheme {
+export interface gandumTheme {
   typography?: string;
   colors?: {
     text?: string;

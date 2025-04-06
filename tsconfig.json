@@ -7,9 +7,9 @@
     "strict": true,
     "baseUrl": "./",
     "paths": {
-      "@gandam/theme": ["dist/theme"],
-      "@gandam/form": ["dist/form"],
-      "@gandam/ui": ["dist/ui"]
+      "@gandum/theme": ["dist/theme"],
+      "@gandum/form": ["dist/form"],
+      "@gandum/ui": ["dist/ui"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

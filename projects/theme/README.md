@@ -1,13 +1,13 @@
-# @gandam/theme
+# @gandum/theme
 
-A powerful and flexible theming system for Angular applications using Gandam UI components.
+A powerful and flexible theming system for Angular applications using gandum UI components.
 
 ## Installation
 
 Install the theme package using npm:
 
 ```bash
-npm install @gandam/theme
+npm install @gandum/theme
 ```
 
 ## Basic Setup
@@ -15,11 +15,11 @@ npm install @gandam/theme
 1. Import the theme module in your app.module.ts:
 
 ```typescript
-import { provideGandam } from "@gandam/theme";
+import { providegandum } from "@gandum/theme";
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideGandam({
+    providegandum({
       // your theme configuration
     }),
   ],
@@ -30,7 +30,7 @@ export const appConfig: ApplicationConfig = {
 
 ```javascript
 module.exports = {
-  content: ["./src/**/*.{html,ts}", "./node_modules/@gandam/**/*.{html,ts,mjs}"],
+  content: ["./src/**/*.{html,ts}", "./node_modules/@gandum/**/*.{html,ts,mjs}"],
   theme: {
     extend: {
       // Your custom theme configurations
@@ -43,12 +43,12 @@ module.exports = {
 
 ### Theme Interface
 
-The `GandamTheme` interface provides a comprehensive set of customization options:
+The `gandumTheme` interface provides a comprehensive set of customization options:
 
 ```typescript
-import { GandamTheme } from "@gandam/theme";
+import { gandumTheme } from "@gandum/theme";
 
-export const myTheme: GandamTheme = {
+export const myTheme: gandumTheme = {
   // Global Typography
   typography: string,
 
@@ -101,9 +101,9 @@ export const myTheme: GandamTheme = {
 Here's how to create a custom theme:
 
 ```typescript
-import { GandamTheme } from "@gandam/theme";
+import { gandumTheme } from "@gandum/theme";
 
-export const myTheme: GandamTheme = {
+export const myTheme: gandumTheme = {
   typography: "font-sans",
   colors: {
     text: "text-gray-900",
@@ -122,6 +122,6 @@ export const myTheme: GandamTheme = {
 
 ## Additional Resources
 
-- [Gandam UI Documentation](https://gandamui.dev)
+- [gandum UI Documentation](https://gandumui.dev)
 - [Tailwind CSS Documentation](https://tailwindcss.com)
 - [Angular Documentation](https://angular.dev)

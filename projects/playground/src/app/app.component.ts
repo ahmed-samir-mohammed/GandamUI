@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UploadFileComponent } from '@gandam/form';
-import { ButtonComponent } from '@gandam/ui';
+import { UploadFileComponent } from '@gandum/form';
+import { ButtonComponent } from '@gandum/ui';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ import { ButtonComponent } from '@gandam/ui';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ng-gandam-playground';
+  title = 'ng-gandum-playground';
 
   fileSelected(file: File) {
     console.log(file);

@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { Input } from '@angular/core';
-import { GandamSize } from '../../types';
-import { GANDAM_THEME, GandamTheme } from '@gandam/theme';
+import { gandumSize } from '../../types';
+import { gandum_THEME, gandumTheme } from '@gandum/theme';
 /**
  * ButtonComponent is a reusable button component for Angular applications.
  * It allows customization of text, CSS classes, color, and disabled state.
@@ -38,12 +38,12 @@ export class ButtonComponent {
    * @default false
    */
   @Input('disabled') gDisabled: boolean = false;
-  @Input() gSize: GandamSize = 'medium';
+  @Input() gSize: gandumSize = 'medium';
 
   /**
    * Constructor that injects the theme service.
    */
-  constructor(@Inject(GANDAM_THEME) public theme: GandamTheme) {}
+  constructor(@Inject(gandum_THEME) public theme: gandumTheme) {}
 
   /**
    * Gets the button classes based on the theme and size.

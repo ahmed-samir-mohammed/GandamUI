@@ -1,6 +1,6 @@
-import { GandamTheme } from '../../../theme/src/lib/theme.interface';
+import { gandumTheme } from '../../../theme/src/lib/theme.interface';
 
-export const GANDAM_CONFIG: GandamTheme = {
+export const gandum_CONFIG: gandumTheme = {
   colors: {
     text: 'text-gray-900',
     background: 'bg-gray-100',

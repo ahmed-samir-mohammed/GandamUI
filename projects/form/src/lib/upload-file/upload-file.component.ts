@@ -2,7 +2,7 @@ import { Component, forwardRef, Inject, Input, input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { EventEmitter, Output } from '@angular/core';
 import { FileInput } from '../../core/interface/form.interface';
-import { GANDAM_THEME, GandamTheme } from '@gandam/theme';
+import { gandum_THEME, gandumTheme } from '@gandum/theme';
 
 @Component({
   selector: 'g-upload-file',
@@ -73,7 +73,7 @@ export class UploadFileComponent {
   @Input() file!: FileInput[] | FileInput;
   fileName: string = 'Choose File';
 
-  constructor(@Inject(GANDAM_THEME) public theme: GandamTheme) {}
+  constructor(@Inject(gandum_THEME) public theme: gandumTheme) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;

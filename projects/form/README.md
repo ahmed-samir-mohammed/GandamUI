@@ -1,4 +1,4 @@
-# GandamUI Form Library
+# gandumUI Form Library
 
 A powerful and flexible form handling library for Angular applications.
 
@@ -7,19 +7,19 @@ A powerful and flexible form handling library for Angular applications.
 Install the library using npm:
 
 ```bash
-npm install @gandam/form
+npm install @gandum/form
 ```
 
 ## Tailwind CSS Configuration
 
-GandamUI Form Library is built with Tailwind CSS for styling. To properly use the library with Tailwind CSS, you need to configure your `tailwind.config.js` as follows:
+gandumUI Form Library is built with Tailwind CSS for styling. To properly use the library with Tailwind CSS, you need to configure your `tailwind.config.js` as follows:
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{html,ts,js}", // Scan your application files
-    "./node_modules/@gandam/**/*.{html,ts,js,mjs}", // Scan GandamUI components
+    "./node_modules/@gandum/**/*.{html,ts,js,mjs}", // Scan gandumUI components
   ],
   theme: {
     extend: {}, // Add your custom theme extensions here
@@ -33,11 +33,11 @@ module.exports = {
 #### Content Paths
 
 - `./src/**/*.{html,ts,js,jsx,tsx}`: Scans all your application source files for Tailwind classes
-- `./node_modules/@gandam/**/*.{html,ts,js,jsx,tsx,mjs}`: Ensures Tailwind processes styles in GandamUI components
+- `./node_modules/@gandum/**/*.{html,ts,js,jsx,tsx,mjs}`: Ensures Tailwind processes styles in gandumUI components
 
 #### Theme Customization
 
-Use the `theme.extend` section to customize or override default Tailwind styles. This ensures compatibility with GandamUI components while allowing for your own styling preferences.
+Use the `theme.extend` section to customize or override default Tailwind styles. This ensures compatibility with gandumUI components while allowing for your own styling preferences.
 
 #### Plugins
 
@@ -45,16 +45,16 @@ Add any Tailwind plugins that enhance your development experience or provide add
 
 ### Important Notes
 
-- Always include the GandamUI path in your content configuration to ensure proper styling
-- Avoid overriding base styles that might affect GandamUI components
+- Always include the gandumUI path in your content configuration to ensure proper styling
+- Avoid overriding base styles that might affect gandumUI components
 - Keep your Tailwind configuration in sync with your project's styling needs
 
 ## Theme Customization
 
-GandamUI provides a powerful theme package that allows you to customize the appearance of components. Install the theme package using npm:
+gandumUI provides a powerful theme package that allows you to customize the appearance of components. Install the theme package using npm:
 
 ```bash
-npm install @gandam/theme
+npm install @gandum/theme
 ```
 
 ### Basic Theme Configuration
@@ -62,11 +62,11 @@ npm install @gandam/theme
 To customize the theme, import and configure the theme module in your application:
 
 ```typescript
-import { provideGandam } from "@gandam/theme";
+import { providegandum } from "@gandum/theme";
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideGandam({
+    providegandum({
       colors: {
         text: "text-gray-900",
         background: "bg-gray-100",
@@ -92,4 +92,4 @@ The theme package supports customization of various aspects:
 - **Typography**: Define font families, sizes, and weights
 - **Borders**: Customize border styles and radiuses
 
-Refer to the @gandam/theme documentation for detailed customization options.
+Refer to the @gandum/theme documentation for detailed customization options.

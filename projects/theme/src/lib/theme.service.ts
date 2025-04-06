@@ -2,12 +2,12 @@
  * Import required Angular dependencies and theme interface
  */
 import { InjectionToken } from '@angular/core';
-import { GandamTheme } from './theme.interface';
+import { gandumTheme } from './theme.interface';
 
 /**
  * Default empty theme configuration
  */
-export const DEFAULT_THEME: GandamTheme = {
+export const DEFAULT_THEME: gandumTheme = {
   typography: 'sans-serif',
   colors: {
     text: '#000',
@@ -36,16 +36,16 @@ export const DEFAULT_THEME: GandamTheme = {
 /**
  * Injection token for providing theme configuration throughout the application
  */
-export const GANDAM_THEME = new InjectionToken<GandamTheme>('GANDAM_THEME');
+export const gandum_THEME = new InjectionToken<gandumTheme>('gandum_THEME');
 
 /**
- * Provider function to configure Gandam theme
+ * Provider function to configure gandum theme
  * @param theme - Partial theme configuration to override defaults
  * @returns Provider configuration object
  */
-export function provideGandam(theme: Partial<GandamTheme> = {}) {
+export function providegandum(theme: Partial<gandumTheme> = {}) {
   return {
-    provide: GANDAM_THEME,
+    provide: gandum_THEME,
     useValue: { ...DEFAULT_THEME, ...theme },
   };
 }
